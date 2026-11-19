@@ -25,7 +25,22 @@ npm run preview
 
 ## Hosting (free)
 
-### Option 1: Vercel (recommended)
+### Deploy without GitHub (no push required)
+
+1. **Build:** `npm run build` (creates the `dist/` folder).
+2. **Vercel (from your computer):**
+   ```bash
+   npx vercel
+   ```
+   Log in if asked, accept defaults. You get a live URL. No GitHub needed.
+3. **Netlify (drag & drop):**
+   - Run `npm run build`.
+   - Go to [app.netlify.com/drop](https://app.netlify.com/drop).
+   - Drag the **dist** folder onto the page. You get a link immediately.
+
+---
+
+### Option 1: Vercel with GitHub (auto-deploy on push)
 
 1. Create a free account at [vercel.com](https://vercel.com) (e.g. sign in with GitHub).
 2. In the project folder, run:

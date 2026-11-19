@@ -1,18 +1,22 @@
 export const about = {
   name: 'Divanshu Gupta',
   title: 'QA Automation Engineer',
-  experience: '4 years',
-  tagline: 'Building reliable test automation with Page Object Model, clean assertions, and maintainable frameworks.',
+  experience: '5 years',
+  tagline: 'I help teams ship faster with fewer bugs — through scalable Playwright & Cypress frameworks, API testing, and AI-assisted QA workflows.',
   openForFreelance: true,
-  objective: 'Detail-oriented and highly motivated Software Tester with a strong passion for ensuring the delivery of high-quality software products. I am seeking a challenging position in a dynamic and collaborative environment where I can leverage my expertise in test planning, execution, and defect management to enhance software reliability and user satisfaction. I am committed to utilising my exceptional analytical skills and problem-solving abilities to identify and address potential issues while actively collaborating with cross-functional teams to deliver seamless and robust software solutions.',
+  // Put your photo in /public and update this path (e.g. '/profile.jpg')
+  photo: '/profile.jpg',
+  objective: 'Senior QA Automation Engineer with 5+ years of experience ensuring high-quality releases across blockchain, gaming, healthcare, SaaS, and NFT products. I combine solid testing fundamentals with modern automation and AI-powered tooling to catch defects early, speed up regression cycles, and give teams the confidence to release often. I am looking for a role where I can own quality end to end, improve test strategy, and collaborate closely with product and engineering teams.',
   summary: [
-    'Senior Quality Analyst Tester with 4+ years of experience in software testing (manual and automation).',
-    'Experienced in automation with Cypress and Playwright with JavaScript and REST API, and performance testing with Postman (various client/server).',
-    'Working in an Agile-Scrum environment.',
-    'Participated in weekly status meetings and coordinated with the Team to resolve and close defects.',
-    'Exposure to the complete software testing process: planning tests, executing tests, logging bugs, tracking defects. Worked on essential stages of the testing life cycle: smoke, integration, regression, system, UAT, and load testing.',
-    'Created test cases: functional unit, positive, negative, and edge test cases.',
-    'Good learner; worked closely with cross-functional teams to deliver projects on time.',
+    'Senior QA Automation Engineer with 5+ years of experience in manual and automation testing across web and mobile applications.',
+    'Build and maintain scalable automation frameworks with Playwright and Cypress (JavaScript) using the Page Object Model, data-driven tests, and reusable utilities.',
+    'Leverage AI tools (ChatGPT, Claude, GitHub Copilot) to generate test cases, test data, and automation scripts, cutting test design and scripting time significantly.',
+    'Test AI/LLM-powered features: validating response accuracy, consistency, hallucinations, prompt edge cases, and safe handling of unexpected inputs.',
+    'Strong in REST API testing with Postman and Swagger — functional, negative, schema, and basic performance/load checks.',
+    'Cover the complete STLC: test planning, test case design (positive, negative, edge, boundary), execution, defect logging, and tracking through to closure.',
+    'Experienced across all testing levels: smoke, sanity, integration, regression, system, UAT, and load testing.',
+    'Work in Agile-Scrum teams — sprint planning, daily stand-ups, and close collaboration with developers, product owners, and designers to deliver on time.',
+    'Recognised at Crownstack with the Rockstar Rookie, Learning Legend, and Employee Spotlight (twice) awards.',
   ],
 }
 
@@ -28,6 +32,25 @@ export const skills = {
   api: [
     { name: 'Postman', category: 'api' },
     { name: 'Swagger', category: 'api' },
+  ],
+  ai: [
+    { name: 'AI-assisted test case generation', category: 'ai' },
+    { name: 'Prompt engineering for QA', category: 'ai' },
+    { name: 'LLM / AI feature testing', category: 'ai' },
+    { name: 'AI test data generation', category: 'ai' },
+    { name: 'ChatGPT', category: 'ai' },
+    { name: 'Claude', category: 'ai' },
+    { name: 'GitHub Copilot', category: 'ai' },
+    { name: 'Playwright MCP', category: 'ai' },
+  ],
+  practices: [
+    'Page Object Model',
+    'Data-driven testing',
+    'Regression testing',
+    'API testing',
+    'Test planning & strategy',
+    'Defect lifecycle',
+    'Agile / Scrum',
   ],
   domains: [
     'Blockchain / Crypto',
@@ -88,13 +111,6 @@ export const projects = [
     tech: ['Mobile', 'Web', 'E-commerce', 'NFT'],
     domain: 'NFT / E-commerce',
   },
-  {
-    id: 'xwife',
-    name: 'Xwife',
-    description: 'Blockchain and Web3 project.',
-    tech: ['Blockchain', 'Web3'],
-    domain: 'Blockchain',
-  },
 ]
 
 export const awards = [
@@ -118,6 +134,6 @@ export const awards = [
 export const contact = {
   email: 'Divanshurajgupta@gmail.com',
   phone: '9717557896',
-  linkedIn: 'https://linkedin.com/in/yourprofile',
+  linkedIn: 'https://www.linkedin.com/in/divanshu-raj-gupta-70584a153/',
   linkedInLabel: 'LinkedIn',
 }

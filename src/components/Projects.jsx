@@ -1,19 +1,24 @@
+import Reveal from './Reveal'
 import { projects } from '../data/content'
 
 export default function Projects() {
   return (
     <section id="projects" className="py-20 px-4 sm:px-6 max-w-5xl mx-auto">
+      <Reveal>
       <h2 className="text-2xl sm:text-3xl font-bold text-[var(--color-text)] mb-4">
         Projects
       </h2>
       <p className="text-[var(--color-text-muted)] mb-10 max-w-2xl">
         Selection of products I have worked on across blockchain, gaming, healthcare, SaaS, and NFT.
       </p>
+      </Reveal>
       <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
-        {projects.map((project) => (
-          <article
+        {projects.map((project, i) => (
+          <Reveal
+            as="article"
             key={project.id}
-            className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-elevated)] p-6 hover:border-[var(--color-accent)]/40 transition-colors"
+            delay={(i % 2) * 120}
+            className="lift rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-elevated)] p-6 hover:border-[var(--color-accent)]/40"
           >
             <span className="text-xs font-mono text-[var(--color-accent)] uppercase tracking-wider">
               {project.domain}
@@ -34,7 +39,7 @@ export default function Projects() {
                 </span>
               ))}
             </div>
-          </article>
+          </Reveal>
         ))}
       </div>
     </section>

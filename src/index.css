@@ -34,3 +34,72 @@ body {
 .font-mono {
   font-family: 'JetBrains Mono', monospace;
 }
+
+/* ---------- Animations ---------- */
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hero entrance */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: none; }
+}
+.animate-fade-up {
+  opacity: 0;
+  animation: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Floating background blobs */
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%      { transform: translate(30px, -20px) scale(1.05); }
+  66%      { transform: translate(-20px, 15px) scale(0.95); }
+}
+.animate-float      { animation: float 14s ease-in-out infinite; }
+.animate-float-slow { animation: float 20s ease-in-out infinite reverse; }
+
+/* Rotating ring around the profile photo */
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+.animate-spin-slow { animation: spin-slow 8s linear infinite; }
+
+/* Pulsing status dot */
+@keyframes ping-soft {
+  0%   { transform: scale(1); opacity: 0.7; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+.animate-ping-soft { animation: ping-soft 1.6s ease-out infinite; }
+
+/* Blinking caret */
+@keyframes blink { 50% { opacity: 0; } }
+.caret::after {
+  content: '|';
+  margin-left: 2px;
+  color: var(--color-accent);
+  animation: blink 1s step-end infinite;
+}
+
+/* Card hover lift */
+.lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -12px color-mix(in srgb, var(--color-accent) 35%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .reveal, .animate-fade-up { opacity: 1; transform: none; }
+}
